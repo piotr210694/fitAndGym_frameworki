@@ -72,7 +72,7 @@ class SiteController extends Controller
      * @return Response|string
      */
     public function actionLogin()
-    {
+    { 
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -166,4 +166,11 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+
+    public function actionAdmin()
+    {
+        return $this->render('adminMain');
+    }
+
+
 }

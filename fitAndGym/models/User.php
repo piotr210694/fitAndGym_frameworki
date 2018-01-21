@@ -138,6 +138,13 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
         $this->authKey = Yii::$app->security->generateRandomString();
     }
 
+    public function checkAdmin()
+    {
+        if ($this->username == 'admin')
+            return true;
+
+        return false;
+    }
     
 
 }

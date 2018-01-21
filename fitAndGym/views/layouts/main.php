@@ -38,11 +38,17 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
+    
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Strona główna', 'url' => ['/site/index']],
             ['label' => 'O nas', 'url' => ['/site/about']],
+            Yii::$app->user->getId()==27 ? (
+                ['label' => 'Panel administratora', 'url' => ['/site/admin']]
+            ) : (
+                ''
+            ),
             Yii::$app->user->isGuest ? (
                 ['label' => 'Zaloguj', 'url' => ['/site/login']]
             ) : (
