@@ -4,7 +4,6 @@ namespace app\models;
 
 use Yii;
 
-
 /**
  * This is the model class for table "users".
  *
@@ -13,11 +12,10 @@ use Yii;
  * @property string $password
  * @property string $authKey
  * @property string $accessToken
- * @property string $passwordHash
  */
-
-class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
+class Users extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
 {
+
     /**
      * @inheritdoc
      */
@@ -34,7 +32,7 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
         return [
             [['username', 'password'], 'required'],
             [['username'], 'string', 'max' => 15],
-            [['password'], 'string', 'max' => 50],
+            [['password'], 'string', 'max' => 30],
             [['authKey', 'accessToken'], 'string', 'max' => 50],
         ];
     }
@@ -85,8 +83,7 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
      */
     public function validatePassword($password)
     {
-        //return $this->password === $password;
-        return (Yii::$app->getSecurity()->validatePassword($password,  $this->passwordHash));
+        return $this->password === $password;
     }
 
 
@@ -116,28 +113,5 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
     {
         return self::findOne(['username'=>$username]);
     }
-
-     
-    /**
-     * Generates password hash from password and sets it to the model
-     *
-     * @param string $password
-     */
-    public function setPassword($password)
-    {
-        $hash = Yii::$app->getSecurity()->generatePasswordHash($password);
-        $this->password = $password;
-        $this->passwordHash = $hash;
-    }
-    
-    /**
-     * Generates "remember me" authentication key
-     */
-    public function generateAuthKey()
-    {
-        $this->authKey = Yii::$app->security->generateRandomString();
-    }
-
-    
 
 }

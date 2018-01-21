@@ -1,17 +1,16 @@
 <?php
 
-/* @var $this yii\web\View */
+    /* @var $this yii\web\View */
+    $this->title = 'Fit and gym!';
 
-$this->title = 'My Yii Application';
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        <img src="img/fitAndGymLogo2.png" alt="logo" width="200px">
+        <h1>Witaj na naszej stronie!</h1>
+        <p class="lead">Cieszymy się, że jesteś z nami! Jeśli jesteś tu nowy, wybierz przycisk poniżej.</p>
+        <p><a class="btn btn-lg btn-success" href="index.php?r=site%2Fsignup">Załóż nowe konto</a></p>
     </div>
 
     <div class="body-content">
