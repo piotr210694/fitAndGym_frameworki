@@ -1,5 +1,8 @@
 <?php
 
+use yii\helpers\Html;
+use yii\helpers\Url;
+
     /* @var $this yii\web\View */
     $this->title = 'Fit and gym!';
 
@@ -18,19 +21,19 @@
                 <h2>Użytkownicy</h2>
                 <p>Kontrola nad użytkownikami zarejestrowanymi w serwisie.</p>
 
-                <p><a class="btn btn-default" href="index.php?r=user-manage%2Findex">Zarządzaj &raquo;</a></p>
+                <p><a class="btn btn-default" href="<?= Url::toRoute('user-manage/index') ?>">Zarządzaj &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Instruktorzy</h2>
-                <p>Dodaj instruktorów.</p>
+                <p>Zarządzaj instruktorami.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Zarządzaj &raquo;</a></p>
+                <p><a class="btn btn-default" href="<?= Url::toRoute('instructor-manage/index') ?>">Zarządzaj &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Zajęcia</h2>
                 <p>Dodaj bądź edytuj zajęcia.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Zarządzaj &raquo;</a></p>
+                <p><a class="btn btn-default" href="<?= Url::toRoute('instructor-manage/index') ?>">Zarządzaj &raquo;</a></p>
             </div>
         </div>
 
@@ -39,19 +42,19 @@
                 <h2>Typ zajęć</h2>
                 <p>Rodzaje zajęć na siłowni.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Zarządzaj &raquo;</a></p>
+                <p><a class="btn btn-default" href="<?= Url::toRoute('instructor-manage/index') ?>">Zarządzaj &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Kalendarz zajęć</h2>
                 <p>Rozplanuj zajęcia na siłowni.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Zarządzaj &raquo;</a></p>
+                <p><a class="btn btn-default" href="<?= Url::toRoute('instructor-manage/index') ?>">Zarządzaj &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Zapisy na zajęcia</h2>
                 <p>Zobacz kto zapisał się na zajęcia.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Zarządzaj &raquo;</a></p>
+                <p><a class="btn btn-default" href="<?= Url::toRoute('instructor-manage/index') ?>">Zarządzaj &raquo;</a></p>
             </div>
         </div>
 
