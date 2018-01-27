@@ -32,11 +32,16 @@ $this->params['breadcrumbs'][] = $this->title;
             'template' => "<div class=\"col-lg-offset-1 col-lg-3\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
         ])->label('Zapamiętaj mnie') ?>
 
+        <?= yii\authclient\widgets\AuthChoice::widget([
+            'baseAuthUrl' => ['site/auth']
+        ]) ?> 
+
         <div class="form-group">
             <div class="col-lg-offset-1 col-lg-11">
                 <?= Html::submitButton('Zaloguj się', ['class' => 'btn btn-success', 'name' => 'login-button']) ?>
             </div>
         </div>
+        
 
     <?php ActiveForm::end(); ?>
 

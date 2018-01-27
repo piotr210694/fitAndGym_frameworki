@@ -11,9 +11,12 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\EntryForm;
+use Facebook\Facebook;
 
 class SiteController extends Controller
 {
+
+    public $successUrl = 'Success'; 
     /**
      * @inheritdoc
      */
@@ -53,8 +56,40 @@ class SiteController extends Controller
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
+            'auth' => [
+                'class' => 'yii\authclient\AuthAction',
+                'successCallback' => [$this, 'successCallback'],
+            ], 
         ];
     }
+
+    public function successCallback($client)
+    {
+        $attributes = $client->getUserAttributes();
+        
+        $user = \app\models\User::find()->where(['email'=>$attributes['email']])->one();
+        if(!empty($user)){
+            Yii::$app->user->login($user);
+        
+        }else{
+            // Save session attribute user from FB
+            $session = Yii::$app->session;
+            $session['attributes']=$attributes;
+
+            // redirect to form signup, variabel global set to successUrl
+            $this->successUrl = \yii\helpers\Url::to(['signup']);
+        }
+        
+        // die(print_r($attributes));
+        //         Yii::$app->session->set('imienazwisko',$attributes['name']);
+        //         Yii::$app->session->set('myemail',$attributes['email']);
+        //         Yii::$app->session->set('mysource',$attributes['cover']['source']);
+
+            
+            // $user = \common\modules\auth\models\User::find()->where(['email'=>$attributes['email']])->one();
+
+    }
+
 
     /**
      * Displays homepage.

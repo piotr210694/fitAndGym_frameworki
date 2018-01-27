@@ -9,9 +9,10 @@
     <div class="jumbotron">
         <img src="img/fitAndGymLogo2.png" alt="logo" width="200px">
         <h1>Witaj na naszej stronie!</h1>
-        <p class="lead">Cieszymy się, że jesteś z nami! Jeśli jesteś tu nowy, wybierz przycisk poniżej.</p>
-        <p><a class="btn btn-lg btn-success" href="index.php?r=site%2Fsignup">Załóż nowe konto</a></p>
+        <p class="lead">Cieszymy się, że jesteś z nami! </p>
     </div>
+
+
 
     <div class="body-content">
 

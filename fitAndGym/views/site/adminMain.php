@@ -15,34 +15,43 @@
 
         <div class="row">
             <div class="col-lg-4">
-                <h2>Heading</h2>
+                <h2>Użytkownicy</h2>
+                <p>Kontrola nad użytkownikami zarejestrowanymi w serwisie.</p>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+                <p><a class="btn btn-default" href="index.php?r=user-manage%2Findex">Zarządzaj &raquo;</a></p>
             </div>
             <div class="col-lg-4">
-                <h2>Heading</h2>
+                <h2>Instruktorzy</h2>
+                <p>Dodaj instruktorów.</p>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
+                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Zarządzaj &raquo;</a></p>
             </div>
             <div class="col-lg-4">
-                <h2>Heading</h2>
+                <h2>Zajęcia</h2>
+                <p>Dodaj bądź edytuj zajęcia.</p>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Zarządzaj &raquo;</a></p>
+            </div>
+        </div>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+        <div class="row">
+            <div class="col-lg-4">
+                <h2>Typ zajęć</h2>
+                <p>Rodzaje zajęć na siłowni.</p>
+
+                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Zarządzaj &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Kalendarz zajęć</h2>
+                <p>Rozplanuj zajęcia na siłowni.</p>
+
+                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Zarządzaj &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Zapisy na zajęcia</h2>
+                <p>Zobacz kto zapisał się na zajęcia.</p>
+
+                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Zarządzaj &raquo;</a></p>
             </div>
         </div>
 

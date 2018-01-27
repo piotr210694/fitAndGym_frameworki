@@ -117,6 +117,11 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
         return self::findOne(['username'=>$username]);
     }
 
+    public static function findByEmail($email)
+    {
+        return self::findOne(['email'=>$email]);
+    }
+
      
     /**
      * Generates password hash from password and sets it to the model
