@@ -48,7 +48,7 @@ AppAsset::register($this);
                 ''
             ) :
             (
-                ['label' => 'Twoje zajęcie', 'url' => ['/site/login']]
+                ['label' => 'Twoje zajęcia', 'url' => ['/takepart-user/index']]
             ),
             Yii::$app->user->getId()==27 ? (
                 ['label' => 'Panel administratora', 'url' => ['/site/admin']]

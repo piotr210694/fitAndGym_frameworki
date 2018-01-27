@@ -64,4 +64,9 @@ class Takepart extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Activity::className(), ['id' => 'activity_id']);
     }
+
+    public function getActivityName()
+    {
+        return $this->activity->name;
+    }
 }
