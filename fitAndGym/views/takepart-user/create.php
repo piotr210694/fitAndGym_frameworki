@@ -19,3 +19,16 @@ $this->params['breadcrumbs'][] = $this->title;
     ]) ?>
 
 </div>
+
+
+<script>
+
+
+var x = $('#select2-selection select2-selection--single');
+if(x.length) {
+   alert('Znaleziono ' + x.length + ' elementów.');
+}
+else
+    alert('brak');
+   
+</script>

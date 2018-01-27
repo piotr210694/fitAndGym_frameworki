@@ -17,7 +17,9 @@ use kartik\select2\Select2;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?php $model->user_id = Yii::$app->user->getId();  ?>
+    <?php 
+        $model->user_id = Yii::$app->user->getId();  
+    ?>
 
     <?= Html::activeHiddenInput($model, 'user_id') ?>
 
@@ -29,17 +31,18 @@ use kartik\select2\Select2;
             'pluginOptions' => [
                 'allowClear' => true
             ],
+            'pluginEvents' => [ 
+                "change" => 
+                    "function(e) {   
+                        var data_id = $(this).val();
+                        $('#id').text(data_id);
+                    }",
+            ],
         ])  
     ?>
-    
-    <div>
-    fdsfsdf
-    dfsdfsd
-    <br>
-    dsfsdf
-    </div>
 
-    
+
+    <p id="id" >IDDD</p>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Zapisz się' : 'Zaktualizuj', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
@@ -48,3 +51,5 @@ use kartik\select2\Select2;
     <?php ActiveForm::end(); ?>
 
 </div>
+
+
