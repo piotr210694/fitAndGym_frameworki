@@ -44,6 +44,12 @@ AppAsset::register($this);
         'items' => [
             ['label' => 'Strona główna', 'url' => ['/site/index']],
             ['label' => 'O nas', 'url' => ['/site/about']],
+            Yii::$app->user->isGuest ? (
+                ''
+            ) :
+            (
+                ['label' => 'Twoje zajęcie', 'url' => ['/site/login']]
+            ),
             Yii::$app->user->getId()==27 ? (
                 ['label' => 'Panel administratora', 'url' => ['/site/admin']]
             ) : (

@@ -33,7 +33,7 @@ use yii\helpers\Url;
                 <h2>Zajęcia</h2>
                 <p>Dodaj bądź edytuj zajęcia.</p>
 
-                <p><a class="btn btn-default" href="<?= Url::toRoute('instructor-manage/index') ?>">Zarządzaj &raquo;</a></p>
+                <p><a class="btn btn-default" href="<?= Url::toRoute('activity-manage/index') ?>">Zarządzaj &raquo;</a></p>
             </div>
         </div>
 
@@ -42,7 +42,7 @@ use yii\helpers\Url;
                 <h2>Typ zajęć</h2>
                 <p>Rodzaje zajęć na siłowni.</p>
 
-                <p><a class="btn btn-default" href="<?= Url::toRoute('instructor-manage/index') ?>">Zarządzaj &raquo;</a></p>
+                <p><a class="btn btn-default" href="<?= Url::toRoute('typeactivity-manage/index') ?>">Zarządzaj &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Kalendarz zajęć</h2>
