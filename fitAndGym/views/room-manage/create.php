@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Typeactivity */
+/* @var $model app\models\Room */
 
-$this->title = 'Dodaj typ zajęć';
-$this->params['breadcrumbs'][] = ['label' => 'Typy zajęć', 'url' => ['index']];
+$this->title = 'Dodaj salę';
+$this->params['breadcrumbs'][] = ['label' => 'Sale', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="typeactivity-create">
+<div class="room-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

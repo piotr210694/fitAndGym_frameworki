@@ -3,14 +3,14 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Instructor */
+/* @var $model app\models\Takepart */
 
-$this->title = 'Aktualizuj instruktorów: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Instruktorzy', 'url' => ['index']];
+$this->title = 'Zaktualizuj zapis: ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Zapisy na zajęcia', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Aktualizuj instruktorów';
+$this->params['breadcrumbs'][] = 'Zaktualizuj zapis';
 ?>
-<div class="instructor-update">
+<div class="takepart-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

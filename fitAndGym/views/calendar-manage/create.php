@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Typeactivity */
+/* @var $model app\models\Calendar */
 
-$this->title = 'Dodaj typ zajęć';
-$this->params['breadcrumbs'][] = ['label' => 'Typy zajęć', 'url' => ['index']];
+$this->title = 'Dodaj zajęcia do kalendarza';
+$this->params['breadcrumbs'][] = ['label' => 'Kalendarz zajęć', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="typeactivity-create">
+<div class="calendar-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

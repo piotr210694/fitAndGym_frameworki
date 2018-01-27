@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Typeactivity */
 
-$this->title = 'Update Typeactivity: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Typeactivities', 'url' => ['index']];
+$this->title = 'Aktualizuj typy zajęć: ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Typy zajęć', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Aktualizuj typy zajęć';
 ?>
 <div class="typeactivity-update">
 

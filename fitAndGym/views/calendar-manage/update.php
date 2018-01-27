@@ -3,14 +3,14 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Instructor */
+/* @var $model app\models\Calendar */
 
-$this->title = 'Aktualizuj instruktorów: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Instruktorzy', 'url' => ['index']];
+$this->title = 'Zaktualizuj zajęcia w kalendarzu: ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Kalendarz zajęć', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Aktualizuj instruktorów';
+$this->params['breadcrumbs'][] = 'Aktualizuj';
 ?>
-<div class="instructor-update">
+<div class="calendar-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
