@@ -60,11 +60,21 @@ class Calendar extends \yii\db\ActiveRecord
         return $this->hasOne(Activity::className(), ['id' => 'activity_id']);
     }
 
+    public function getActivityName()
+    {
+        return $this->activity->name;
+    }
+
     /**
      * @return \yii\db\ActiveQuery
      */
     public function getRoom()
     {
         return $this->hasOne(Room::className(), ['id' => 'room_id']);
+    }
+
+    public function getRoomNumber()
+    {
+        return $this->room->number;
     }
 }

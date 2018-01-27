@@ -50,6 +50,12 @@ AppAsset::register($this);
             (
                 ['label' => 'Twoje zajęcia', 'url' => ['/takepart-user/index']]
             ),
+            Yii::$app->user->isGuest ? (
+                ''
+            ) :
+            (
+                ['label' => 'Kalendarz zajęć', 'url' => ['/calendar-user/index']]
+            ),
             Yii::$app->user->getId()==27 ? (
                 ['label' => 'Panel administratora', 'url' => ['/site/admin']]
             ) : (
